@@ -1,3 +1,4 @@
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { NgModule } from '@angular/core';
 
 // Component
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     ProgressComponent,
     Graficas1Component,
     PagesComponent,
+    IncrementadorComponent
   ],
   exports: [
     DashboardComponent,

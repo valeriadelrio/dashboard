@@ -4,7 +4,11 @@
             <div class="card-body">
                 <h4 class="card-title">Progress bar</h4>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValueNow]="percent" [style.width]="percent + '%'"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValueNow]="percent1" [style.width]="percent1 + '%'"></div>
+                </div>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValueNow]="percent2" [style.width]="percent2 + '%'"></div>
                 </div>
             </div>
         </div>
@@ -15,26 +19,14 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                     <button class="btn btn-primary" type="button" (click)="changeValue(-5)">
-                       <i class="mdi mdi-minus"></i>
-                     </button>
-                  </span>
-                    <input type="text" class="form-control" name="percent" [(ngModel)]="percent">
-                    <span class="input-group-btn">
-                     <button class="btn btn-primary" type="button" (click)="changeValue(5)">
-                       <i class="mdi mdi-plus"></i>
-                     </button>
-                  </span>
-                </div>
+                <app-incrementador (cambioValor)="percent1 = $event" nombre="Progress blue" [percent]="percent1"></app-incrementador>
             </div>
         </div>
     </div>
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                Texto 2
+                <app-incrementador (cambioValor)="percent2 = $event" nombre="Progress green" [percent]="percent2"></app-incrementador>
             </div>
         </div>
     </div>
