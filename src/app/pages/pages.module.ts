@@ -11,11 +11,13 @@ import { PAGES_ROUTES } from './pages.routes';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     SharedModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    FormsModule
   ],
   declarations: [
     DashboardComponent,
