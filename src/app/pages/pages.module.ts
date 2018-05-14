@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 
 // Graficas
 import { ChartsModule } from 'ng2-charts';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { ChartsModule } from 'ng2-charts';
     Graficas1Component,
     PagesComponent,
     IncrementadorComponent,
-    GraficoDonaComponent
+    GraficoDonaComponent,
+    AccountSettingsComponent
   ],
   exports: [
     DashboardComponent,
